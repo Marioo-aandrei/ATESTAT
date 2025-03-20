@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mircea Dinescu</title>
+    <style>
+        frameset {
+            border: none;
+        }
+        frame {
+            border: none;
+        }
+    </style>
+</head>
+<frameset rows="15%, 85%" frameborder="0" border="0">
+    <frame src="html/meniu.html" name="meniu" scrolling="no" noresize>
+    <frame src="html/continut.html" name="continut">
+</frameset>
+</html>
+
+<!-- Pagini suplimentare -->
+
+<!-- meniu.html -->
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Meniu</title>
+    <style>
+        body {
+            background-color: #8b0000;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out;
+        }
+        a:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="html/continut.html" target="continut">Acasă</a>
+        <a href="html/biografie.html" target="continut">Biografie</a>
+        <a href="html/poezii.html" target="continut">Poezii</a>
+        <a href="html/contact.html" target="continut">Contact</a>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poezii - Mircea Dinescu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+    /* Reset general */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f0f4f8;
+        color: #333;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 40px auto;
+        background: #fff;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 40px;
+        color: #8b0000;
+        margin-bottom: 40px;
+        font-weight: 600;
+    }
+
+    .poem-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .poem-item {
+        background-color: #ecf0f1;
+        padding: 20px;
+        border-radius: 12px;
+        font-size: 18px;
+        transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        color: #333; /* Default text color */
+    }
+
+    /* Change background color to #8b0000 and text color to white when hovered */
+    .poem-item:hover {
+        background-color: #8b0000;
+        color: white;  /* Change text color to white on hover */
+        transform: translateY(-8px);
+        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Make sure all nested elements inside .poem-item also turn white when hovered */
+    .poem-item:hover * {
+        color: white; /* Change color to white when .poem-item is hovered */
+    }
+
+    .poem-item label {
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #2c3e50;
+        transition: color 0.3s ease;
+    }
+
+    .poem-item input[type="checkbox"] {
+        display: none;
+    }
+
+    .poem-verse {
+        display: none;
+        margin-top: 15px;
+        color: #333; /* Default text color for the verses */
+        padding-left: 15px;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.6;
+        transition: max-height 0.5s ease-out, color 0.3s ease;
+        overflow: hidden;
+    }
+
+    /* When checkbox is checked, show the verses */
+    .poem-item input[type="checkbox"]:checked + .poem-verse {
+        display: block;
+        color: #333; /* Default text color for the verses */
+    }
+
+    /* Indicator for checkbox toggle */
+    .poem-item label:after {
+        content: "+";
+        font-size: 24px;
+        font-weight: bold;
+        color: #8b0000;
+        transition: transform 0.3s ease;
+    }
+
+    .poem-item input[type="checkbox"]:checked + .poem-verse + label:after {
+        content: "-";
+        transform: rotate(180deg);
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+        .container {
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 32px;
+        }
+
+        .poem-item {
+            font-size: 16px;
+        }
+    }
+</style>
+
+
+
+
+
+
+</head>
+<body>
+    </style>
+</head>
+<body>
+    </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Poezii</h2>
+    <div class="poem-list">
+        <div class="poem-item">
+            <label for="poem1">Actorul</label>
+            <input type="checkbox" id="poem1">
+            <div class="poem-verse">
+                <p>Azi scriem poezia pe mari bucăţi de pâine,<br>
+                arta-i maşinăria de curăţat cartofi,<br>
+                chiar tu vei fi cartoful sortit zilei de mâine,<br>
+                actor retras ca melcul în pantofi.</p>
+                <p>Iată cum din teroare pianul spală rufe<br>
+                şi sar din pieptul nostru cameleoni de preţ,<br>
+                iată cum scoate limba ceasul zvârlit în tufe<br>
+                ca vipera aprinsă de fiere şi dispreţ.</p>
+                <p>Iată cum umblă foamea prin cântec ca o mamă,<br>
+                cum calcă pacea beată pe morţii din tranşei,<br>
+                o mână scoate-n ceruri un înger de reclamă,<br>
+                o alta zvârle molimi pe turmele de miei.</p>
+                <p>Tu, care-ţi pui pistolul la tâmplă ca pe-o floare<br>
+                când sus în nori rânjeşte hazardul roz şi chel,<br>
+                tu, care mori de noapte şi mori de fiecare,<br>
+                porţi viermele în palmă ca pe un scump inel.</p>
+                <p>Septembrie iţi sare ca o pisică-n faţă<br>
+                şi înfloresc în tine vise de şoarec mic,<br>
+                nimic nu-ţi mai ajunge şi totul te răsfaţă,<br>
+                proprietar pe vorbe şi rege pe nimic,</p>
+                <p>Smulge-ţi tu singur limba, scrie pe ea Adio,<br>
+                îneacă-te-n saliva celor ce te-au râvnit,<br>
+                ascultă trenul toamnei cum se răstoarnă-n ziuă<br>
+                cu tâmpla mea de aur într-un vagon rănit.</p>
+            </div>
+        </div>
+        <div class="poem-item">
+            <label for="poem2">Ai grijă</label>
+            <input type="checkbox" id="poem2">
+            <div class="poem-verse">
+                <p>Ai grijă sa nu faci si tu explozie<br>
+                (din inger n-a ramas nici macar o schija)<br>
+                calcă pe virful plopilor cu grijă<br>
+                sa nu versi sufertasul cu ambrozie</p>
+                <p>Sint zei abandonati ca puii mîtii<br>
+                prin gropile ceresti scîncind de sete,<br>
+                sint arhitectii Domnului, in cete,<br>
+                ce-au lins pe urma lui dira tăritii.</p>
+                <p>Tu voiajor al stărilor de transă<br>
+                ai grijă de caminul de batrini,<br>
+                minte-i c-au fost eroi si c-au fost buni<br>
+                si ca mai au acolo jos o sansa</p>
+            </div>
+        </div>
+        <div class="poem-item">
+            <label for="poem3">Anonim</label>
+            <input type="checkbox" id="poem3">
+            <div class="poem-verse">
+                <p>Decît să vă-ndulcesc cu arta ceaiul,<br>
+                (oh, inimă în scutece de prunc),<br>
+                mai bine-n seara asta beat, cu paiul<br>
+                sug luna şi pe cioburi mă arunc,</p>
+                <p>căci anonim ca acul în furaje,<br>
+                purtând în vene sânge de sobol,<br>
+                aş inventa femeia cu etaje,<br>
+                cu magazii de zahăr la subsol,</p>
+                <p>iubirea mea să scoată ţări din criză,<br>
+                sărutul meu pompat la Polul Nord<br>
+                să bage plitele de gheaţă-n priză,<br>
+                să cadă cancerul bolnav de cord,</p>
+                <p>să mân c-un bici oraşul pe câmpie<br>
+                ca pe-un tramvai eretic tras de cai,<br>
+                gata oricând să-mi puneţi şaua mie,<br>
+                dar să nu-mi cereţi artă pentru ceai.</p>
+            </div>
+        </div>
+        <div class="poem-item">
+            <label for="poem4">Apelul de seară</label>
+            <input type="checkbox" id="poem4">
+            <div class="poem-verse">
+                <p>Bucatariile se vad din cer<br>
+                mai bine decît oamenii de seama,<br>
+                prinzi ingerul-n gamela ta cu zeama<br>
+                nedetectat de radarul de fier,<br>
+                intii precum o pata de untura<br>
+                apoi intregul sclipat te-a orbit,<br>
+                duci Duhul Sfint cu lingura la gura<br>
+                de-ti cânta matul de mitropolit,</p>
+                <p>matul tau lung si gales de matase<br>
+                prin care azi vorbisi si tu cu El,<br>
+                suflet purtind o ranita cu oase<br>
+                aici, pe buza gropii, la apel</p>
+            </div>
+        </div>
+        <div class="poem-item">
+            <label for="poem5">Astăzi nu</label>
+            <input type="checkbox" id="poem5">
+            <div class="poem-verse">
+                <p>La o masă umblătoare,<br>
+                la un vin ce nici n-a fost,<br>
+                stau cu moartea-ntre pahare<br>
+                chefuind în zi de post,</p>
+                <p>urcă viermele pe lampă,<br>
+                fierb piroanele în uşi,<br>
+                simt mireasma ei de vampă<br>
+                dezbrăcată de cenuşi.</p>
+                <p>Astăzi nu, dar mâine poate,<br>
+                (dracu ştie oare când),<br>
+                fi-voi tânăr pe furate,<br>
+                iar bătrân şi mai curând.</p>
+            </div>
+        </div>
+        <div class="poem-item">
+            <label for="poem6">Atentator de provincie</label>
+            <input type="checkbox" id="poem6">
+            <div class="poem-verse">
+                <p>Lângă oftatul gării bodega-i cu noroc,<br>
+                pisica iar se freacă de scaun şi ia foc,<br>
+                vioara taie capul ţiganului coclit,<br>
+                nu strănuta că zboară toţi fluturii din zid.</p>
+                <p>Azi o s-atac oraşul, dar parcă dinadins<br>
+                castelul e de apă, păzit numai de-un ins<br>
+                şi-unde credeam că-i grâul învârtoşat şi roz<br>
+                soldaţii îşi usucă ciorapii pe siloz.</p>
+                <p>Cu cine-nvârte toamna afacerile-i reci?<br>
+                Pe unde curge raiul în om, miroase-a beci<br>
+                şi-a spirt trecut prin pâine şi-a buci de nenufar…<br>
+                Nu strănuta că zboară frumosul din ziar.</p>
+            </div>
+        </div>
+        <div class="poem-item">
+            <label for="poem7">Autopsia îngerului</label>
+            <input type="checkbox" id="poem7">
+            <div class="poem-verse">
+                <p>Plingi în coltul magaziei<br>
+                si lacrimile-ti ramin în pinza paianjenilor<br>
+                mirati de-asa muste amare.</p>
+                <p>O slujnica din secolul trecut<br>
+                se piaptana fericita în pragul unei case<br>
+                cazate chiar ieri la cutremur.</p>
+                <p>Nu poti face nimic<br>
+                pentru copilul smintit ascuns în boscheti<br>
+                ce scoate scântei si funingine pe gura<br>
+                ca un vapor cu zbaturi.<br>
+                El e aidoma oului<br>
+                cu aura pe dinlauntru.<br>
+                Daca i-ai atinge macesul din preajma<br>
+                ai cadea electrocutat.</p>
+            </div>
+        </div>
+        <div class="poem-item">
+            <label for="poem8">Balada amurgitului</label>
+            <input type="checkbox" id="poem8">
+            <div class="poem-verse">
+                <p>Pe vremuri când mi-era urât<br>
+                dormeam cu îngerul de gât<br>
+                la masa lui la masa mea<br>
+                eu mă treceam iar el trecea...<br>
+                Îngerul meu unde te duci<br>
+                anii se scutură de nuci<br>
+                și lacrimile-s până-n plopi<br>
+                eu semăn cer tu semeni gropi,<br>
+                hai bea un vin de mai gălbui<br>
+                la crâșma necuratului<br>
+                unde se rup de mucegai<br>
+                femei cu capete de cai<br>
+                unde-ți torni zilele-n pahar<br>
+                și te privesc triști ochi de zar<br>
+                unde frângi pâinea-n geam și vezi<br>
+                cum frații tăi tocmesc cirezi<br>
+                cum cad părinții pe ogor<br>
+                sub coasa întâmplării lor<br>
+                cum vine vai să nu mă lași<br>
+                ignatul anilor mei grași<br>
+                amurg înfipt până-n prăsea<br>
+                în pieptul meu...<br>
+                Dar el trecea</p>
+            </div>
+        </div>
+        <div class="poem-item">
+            <label for="poem9">Balada celui plecat</label>
+            <input type="checkbox" id="poem9">
+            <div class="poem-verse">
+                <p>Am iubit urâte dar deştepte<br>
+                şi frumoase fără căpătâi,<br>
+                n-am avut iubirea cea dintâi<br>
+                n-a avut răbdare să m-aştepte.</p>
+                <p>Îngerul ca unghia întoarsă<br>
+                mi-a crescut în carne dimpotrivă,<br>
+                mi-aţi adus la naştere colivă<br>
+                şi la groapa dric cu cioc de barză.</p>
+                <p>Zilele bolesc pe-aici ca anii,<br>
+                anii - zilieri trecuţi prin fermă.<br>
+                Va uitarăţi cu binoclu-n spermă<br>
+                cum vâslesc strămoşii mei, ţiganii.</p>
+                <p>Haida-de! De-a lungul şi de-a latul<br>
+                m-aţi vânat când nu eram acasă.<br>
+                Chiar şi-acum când stau întins pe masă<br>
+                eu sositul râd de eu plecatul.</p>
+            </div>
+        </div>
+        <div class="poem-item">
+            <label for="poem10">Balada triștilor băcani</label>
+            <input type="checkbox" id="poem10">
+            <div class="poem-verse">
+                <p>Printre dugheni pe strada Zece mese<br>
+                acum o sută şi ceva de ani<br>
+                a fost zărit, cu orbitoare fese,<br>
+                îngerul trist al triştilor băcani.</p>
+                <p>Era un semn al crizei monetare,<br>
+                căci se-auzea un zumzet de argint<br>
+                venind dinspre ciudata arătare<br>
+                ce se-nălţa, parcă mai mult tuşind.</p>
+                <p>Ziarele-apărute-n haine grave<br>
+                au provocat revoltă în Şanhai<br>
+                şi-n izbele din ceţurile slave<br>
+                s-au fript pe limbă băutori de ceai.</p>
+                <p>Azi jocul acesta nu mai are piese<br>
+                şi ca argintul ce-a fugit din bani<br>
+                pe strada Zece nu mai sunt nici mese,<br>
+                nici băcănii, nici îngeri, nici băcani.</p>
+            </div>
+        </div>
+				<div class="poem-item">
+				<label for="poem11">Când treci</label>
+                <input type="checkbox" id="poem11">
+                <div class="poem-verse">
+                    <p>Sub pașii tăi cad viermii în extaz<br>
+                    se bâlbâie salcâmii si fac spume<br>
+                    rușinea-mi fuge beată din obraz<br>
+                    si m-as dori pământ muscat de râme,<br>
+                    pe care surâzând să îl zdrobești<br>
+                    cu tălpile și-apoi fără sfială<br>
+                    trupul să-ți plimbi în douășpe calești<br>
+                    învesmântat în pielea goală.<br>
+                    Ianuarie să curgă-n luna mai,<br>
+                    să-nnebunească în altare popii<br>
+                    si regii sub coroanele de pai<br>
+                    când treci prin dreptul meu și mă dor ochii.</p>
+                </div>
+            </div>
+
+           
+            <div class="poem-item">
+                <label for="poem12">Cântec de Doamne-iartă</label>
+                <input type="checkbox" id="poem12">
+                <div class="poem-verse">
+                    <p>Doamne iartă ce-am mai râs<br>
+                    moartea nu avea sacâz<br>
+                    și-și plimba arcușul frate<br>
+                    pe babe dezacordate.<br>
+                    Scârța scârța scârța scârța<br>
+                    pâine nu-i dă-i simt tărâța<br>
+                    hârș și hârș și hârș și hârș<br>
+                    n-avem oi dar avem urși.<br>
+                    văleu neica văleu vere<br>
+                    cui de aur în muiere<br>
+                    bătui noaptea ca-n coșciug<br>
+                    și nu pot ieși la plug<br>
+                    mă latră fierul - de scap<br>
+                    o s-o ar cu fusta-n cap.<br>
+                    Scârța scârța scârța scârța<br>
+                    pâine nu-i da-i simt tărâța<br>
+                    hârș și hârș și hârș și hârș<br>
+                    n-avem oi dar avem urși.</p>
+                </div>
+            </div>
+
+           
+            <div class="poem-item">
+                <label for="poem13">Cântec de inimă albastră</label>
+                <input type="checkbox" id="poem13">
+                <div class="poem-verse">
+                    <p>Mai ştii cum te strigam pe-atunci,<br>
+                    “icoană cu picioare lungi”?</p>
+                    <p>Veneai pe râu sau râu erai,<br>
+                    curgeai în mine pînă-n rai,</p>
+                    <p>cu limba preschimbată-n bici<br>
+                    vânam pe coapse iepuri mici,</p>
+                    <p>vânam prin pulpe fân mieriu,<br>
+                    erai mireasmă eram viu.</p>
+                    <p>Dar, of, of, of, desiş de ochi,<br>
+                    acum de mine trag trei popi,</p>
+                    <p>carnea-mi miroase de pe-acum<br>
+                    a scândurică de salcâm,</p>
+                    <p>pe când mânzeşte muşti din cai,<br>
+                    mie ţărâna-mi spune, hai,</p>
+                    <p>mie ulcica-mi spune blid,<br>
+                    iubire – măr rostogolit.</p>
+                </div>
+            </div>
+
+
+            <div class="poem-item">
+                <label for="poem14">Cântec de lampă stinsă</label>
+                <input type="checkbox" id="poem14">
+                <div class="poem-verse">
+                    <p>Închisorile au fost deschise,<br>
+                    dar din ele nimeni n-a ieşit,<br>
+                    unii chiar s-au spânzurat de vise,<br>
+                    alţii chiar s-au îngropat în zid.</p>
+                    <p>Din pământ acum nu se mai poate<br>
+                    face nici biserică, nici steag,<br>
+                    unii dau din umeri şi din coate,<br>
+                    alţii dau cu frunţile de prag.</p>
+                    <p>Cine mă aşteaptă, nu m-aşteaptă,<br>
+                    omul viu din mine-i asfinţit,<br>
+                    raza cade râncedă, nu dreaptă,<br>
+                    lacrima nu-i apă, ci cuţit.</p>
+                </div>
+            </div>
+
+            
+            <div class="poem-item">
+                <label for="poem15">Cântec de rinocer</label>
+                <input type="checkbox" id="poem15">
+                <div class="poem-verse">
+                    <p>Ca rinocerul care-atacă trenul<br>
+                    încerc să trec de treizeci de ani,<br>
+                    dar îngerul meu, purul şi obscenul,<br>
+                    s-a prăbuşit lovit de bolovani</p>
+                    <p>fiindcă a fost zărit plutind pe arii<br>
+                    de un ţăran lucrat de viziuni<br>
+                    şi-acum îl ţin sub bâta lor pândarii<br>
+                    să-l stoarcă de mirare şi minuni:</p>
+                    <p>“O hi lăcusta care-mpunge orzul<br>
+                    sau fluturele îngrăşat cu pai<br>
+                    sau pasăre cum o arată torsul<br>
+                    sau viespea albă ce ucide cai</p>
+                    <p>că d-aia parcă s-a rărit porumbul<br>
+                    şi laptele s-a subţiat în vaci,<br>
+                    că umblă gîza asta grea ca plumbul<br>
+                    şi paşte catifeaua prin copaci,</p>
+                    <p>ţineţi-o bine ca să-i dăm cu prafuri<br>
+                    otrăvitoare şi chemaţi ţigani…”<br>
+                    Aud roind în jurul meu tarafuri<br>
+                    şi-ncerc să trec de treizeci de ani.</p>
+                </div>
+            </div>
+
+       
+            <div class="poem-item">
+                <label for="poem35">Vila artistului</label>
+                <input type="checkbox" id="poem35">
+                <div class="poem-verse">
+                    <p>Dosarul meu creşte ca pâinea bună,<br>
+                    se umflă, pârâie, dospeşte lin,<br>
+                    iubito, vom petrece împreună<br>
+                    sub streşinile lui de vinilin.</p>
+                    <p>Ia-ţi şi părinţii ca să nu fim singuri,<br>
+                    ia-ţi şi umbrela pentru orice risc,<br>
+                    e toamnă-n vorbe şi ne plouă-n linguri<br>
+                    şi cad din pomi agenţii de la fisc.</p>
+                    <p>Azi trec nepăsător printre vitrine,<br>
+                    nici nu mă uit, nici nu miros, nici nu înjur:<br>
+                    carne de tun, osânză de albine,<br>
+                    şi-un îngeraş de votcă în azur…</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+	
+
+</div>
+
+</body>
+</html>
