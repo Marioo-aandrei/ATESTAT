@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mircea Dinescu - Video</title>
+    <style>
+        /* Resetare avansată */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: #f8f9fa linear-gradient(to right, #ffffff 0%, #f8f9fa 100%);
+            color: #444;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+            animation: fadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 3.5em;
+            color: #8b0000;
+            text-align: center;
+            margin: 40px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: #8b0000;
+            margin: 20px auto;
+            border-radius: 2px;
+        }
+
+        .video-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .video-card {
+            background: #fff5f5;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-info {
+            padding: 20px;
+        }
+
+        .video-info h3 {
+            color: #8b0000;
+            margin-bottom: 10px;
+        }
+
+        .video-info p {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .quote-block {
+            border-left: 5px solid #8b0000;
+            padding: 30px;
+            margin: 40px 0;
+            background: #fff9f9;
+            font-size: 1.2em;
+            grid-column: 1 / -1;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background-color: #8b0000;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            grid-column: 1 / -1;
+        }
+
+        .back-link:hover {
+            background-color: #a00000;
+        }
+
+        @media (max-width: 992px) {
+            .container {
+                padding: 25px;
+            }
+            
+            .video-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mircea Dinescu - Video</h1>
+
+        <div class="video-section">
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/T-MElnyn2Rs" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Interviu memorabil</h3>
+                    <p>Mircea Dinescu - 17 Ani (1967)</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/niMy4jzo6Og" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Recitare poetică</h3>
+                    <p>Mircea Dinescu interpretează "Carnetul unui nesocotit" la Festivalul Internațional de Poezie.</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/E7dEIlM17Cw" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Discurs revoluționar</h3>
+                    <p>Momentul emblematic din decembrie 1989 care l-a consacrat ca voce a revoluției.</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/CTzua7UXWHE" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Rezistența prin cultură</h3>
+                    <p>Lecții de scriitură creative într-un seminar</p>
+                </div>
+            </div>
+
+            <div class="quote-block">
+                <p>"Televiziunea este pentru mine o extensie a poeziei. Fiecare cadru e un vers, fiecare montaj o strofă."</p>
+            </div>
+
+            <a href="imagini.html" target="imagini" class="back-link">Imagini</a>
+        </div>
+    </div>
+</body>
+</html>

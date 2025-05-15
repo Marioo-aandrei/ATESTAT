@@ -1,0 +1,29 @@
+body {
+    background: #777;
+    font-family: 'Georgia', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.citat-box {
+    background: #000000;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.citat {
+    font-size: 25px;
+    color: #ffffff;
+    margin-bottom: 19px;
+}
+
+.autor {
+    font-size: 18px;
+    color: #777;
+    font-style: italic;
+}

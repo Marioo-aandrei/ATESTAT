@@ -2,7 +2,6 @@
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meniu</title>
     <style>
         body {
@@ -13,12 +12,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            height: 100%;
         }
         nav {
             display: flex;
             gap: 20px;
-            flex-wrap: wrap; /* Allows links to wrap on smaller screens */
         }
         a {
             color: white;
@@ -32,28 +30,16 @@
         a:hover {
             background-color: rgba(255, 255, 255, 0.5);
         }
-        .active {
-            background-color: rgba(255, 255, 255, 0.5);
-            font-weight: bold;
-        }
-        @media (max-width: 600px) {
-            nav {
-                flex-direction: column; /* Stack links vertically on small screens */
-                align-items: center;
-            }
-        }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="continut.html" target="continut" class="active">Acasă</a>
-            <a href="biografie.html" target="continut">Biografie</a>
-            <a href="poezii.html" target="continut">Poezii</a>      
-            <a href="imagini.html" target="continut">Imagini</a>
-            <a href="video.html" target="continut">Video</a>
-            <a href="contact.html" target="continut">Contact</a>
-        </nav>
-    </header>
+    <nav>
+        <a href="continut.html" target="continut">Acasă</a>
+        <a href="biografie.html" target="continut">Biografie</a>
+        <a href="poezii.html" target="continut">Poezii</a>      
+		 <a href="imagini.html" target="continut">Imagini</a>
+		  <a href="video.html" target="continut">Video</a>
+		  <a href="contact.html" target="continut">Contact</a>
+    </nav>
 </body>
 </html>
